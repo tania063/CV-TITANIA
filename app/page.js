@@ -1,51 +1,68 @@
 import React from 'react';
+import { Mail, Phone, Briefcase, User, Code, Folder } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 p-8 text-black">
-      <header className="text-center mb-8">
-        <h1 className="text-4xl font-bold">CV</h1>
-        <h2 className="text-4xl font-bold">TITANIA</h2>
-      </header>
+    <div className="min-h-screen bg-gradient-to-r from-gray-800 to-gray-900 p-6 text-white">
+      <div className="max-w-4xl mx-auto bg-gray-100 text-gray-900 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="p-8">
+          {/* Profile Section */}
+          <div className="flex items-center space-x-4">
+            <img src="aku.jpg" alt="Profile" className="w-32 h-32 rounded-full object-cover border-4 border-gray-700" />
+            <div>
+              <h1 className="text-4xl font-bold text-gray-800">Titania</h1>
+              <p className="text-lg text-gray-600">Mahasiswa Komputerisasi Akuntansi - Universitas Masoem</p>
+            </div>
+          </div>
 
-      {/* About Section */}
-      <section className="bg-white shadow-md rounded-2xl p-6 mb-6">
-        <h2 className="text-2xl font-semibold mb-4">About</h2>
-        <p>
-          Saya merupakan seorang mahasiswa aktif Universitas Masoem semester 4.
-          Prodi yang saya tempuh ialah Komputerisasi Akuntansi.
-        </p>
-      </section>
+          {/* About Section */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold text-gray-700 flex items-center"><User className="mr-2" /> Tentang Saya</h2>
+            <p className="mt-2 text-gray-700">
+              Saya merupakan seorang mahasiswa aktif Universitas Masoem semester 4, prodi yang saya tempuh ialah Komputerisasi Akuntansi.
+            </p>
+          </section>
 
-      {/* Skills Section */}
-      <section className="bg-white shadow-md rounded-2xl p-6 mb-6">
-        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-        <ul className="list-disc list-inside">
-          <li>Bekerja dengan tim</li>
-          <li>Komunikasi yang baik</li>
-          <li>microsoft office (terkhusus word dan exel)</li>
-          <li>Gampang untuk beradaptasi dengan hal baru</li>
-        </ul>
-      </section>
+          {/* Skills Section */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold text-gray-700 flex items-center"><Code className="mr-2" /> Keterampilan</h2>
+            <ul className="list-disc list-inside mt-2 text-gray-700">
+              <li>Bekerja dengan tim</li>
+              <li>Komunikasi yang baik</li>
+              <li>Gampang beradaptasi dengan hal baru</li>
+            </ul>
+          </section>
 
-      {/* Services Section */}
-      <section className="bg-white shadow-md rounded-2xl p-6 mb-6">
-        <h2 className="text-2xl font-semibold mb-4">Services</h2>
-        <p>saya mampu dalam menyusun laporan keuangan</p>
-      </section>
+          {/* Services Section */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold text-gray-700 flex items-center"><Briefcase className="mr-2" /> Layanan</h2>
+            <ul className="list-disc list-inside mt-2 text-gray-700">
+              <li>Pencatatan dan pengelolaan transaksi keuangan</li>
+              <li>Pembuatan laporan keuangan bulanan dan tahunan</li>
+              <li>Konsultasi perpajakan dan pengisian SPT</li>
+              <li>Audit internal sederhana untuk usaha kecil</li>
+              <li>Analisis laporan keuangan untuk pengambilan keputusan bisnis</li>
+            </ul>
+          </section>
 
-      {/* Portfolio Section */}
-      <section className="bg-white shadow-md rounded-2xl p-6 mb-6">
-        <h2 className="text-2xl font-semibold mb-4">Portfolio</h2>
-        <p>membuat form penjualan dalam berbasis desktop</p>
-      </section>
+          {/* Portfolio Section */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold text-gray-700 flex items-center"><Folder className="mr-2" /> Portofolio</h2>
+            <p className="mt-2 text-gray-700">
+              Proyek-proyek yang telah saya kerjakan selama menempuh pendidikan D3 Komputerisasi Akuntansi, termasuk aplikasi pencatatan keuangan dan analisis data.
+            </p>
+          </section>
 
-      {/* Contact Section */}
-      <section className="bg-white shadow-md rounded-2xl p-6">
-        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
-        <p>Email: <a href="mailto:titania683@gmail.com" className="text-black">titania683@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/0895356201809" className="text-black">0895356201809</a></p>
-      </section>
+          {/* Contact Section */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold text-gray-700 flex items-center">Kontak</h2>
+            <div className="mt-4 space-y-2 text-gray-700">
+              <p className="flex items-center"><Mail className="mr-2 text-gray-700" /> titania683@gmail.com</p>
+              <p className="flex items-center"><Phone className="mr-2 text-gray-700" /> 0895356201809</p>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }
